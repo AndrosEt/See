@@ -29,6 +29,7 @@ class auto_adb():
             print('请安装 ADB 及驱动并配置环境变量')
             exit(1)
 
+
     def get_screen(self):
         process = os.popen(self.adb_path + ' shell wm size')
         output = process.read()

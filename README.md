@@ -1,22 +1,5 @@
-# 如何在抖音上找到漂亮小姐姐----抖音机器人
+# 抖音机器人
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)      
-
-最近沉迷于抖音无法自拔，常常花好几个小时在抖音**漂亮小姐姐**身上。
-
-为了**高效、直接**地找到漂亮小姐姐，我用 Python + ADB 做了一个 Python 抖音机器人 Douyin-Bot。
-
-![](screenshot/demo.gif)
-
-##  特性
-
-- [x] **自动翻页**
-- [x] **颜值检测**
-- [x] **人脸识别**
-- [x] **自动点赞**
-- [x] **自动关注**
-- [x] 随机防 Ban
-- [ ] 自动回复
 
 ##  原理
 
@@ -55,6 +38,5 @@ MIT
 
 欢迎 Star 和 Fork ~
 
-如果你有什么问题请提 Issue，或者关注我的微信公众号留言，我都会一一解答
+如果你有什么问题请提 Issue
 
-![](screenshot/qrcode.jpg)
