@@ -4,6 +4,7 @@ import random
 import time
 from PIL import Image
 import ssl
+import face_recognition
 ssl._create_default_https_context = ssl._create_unverified_context
 
 if sys.version_info.major != 3:
@@ -137,8 +138,14 @@ def main():
         with open('cropped.png', 'rb') as bin_data:
             image_data = bin_data.read()
 
-        ai_obj = apiutil.AiPlat(SecretId, SecretKey)
-        rsp = ai_obj.face_detectface(image_data)
+            # 载入用户上传的图片
+        img = face_recognition.load_image_file("cropped.png")
+        # 为用户上传的图片中的人脸编码
+        unknown_face_encodings = face_recognition.face_encodings(img)
+
+        if len(unknown_face_encodings) > 0:
+            ai_obj = apiutil.AiPlat(SecretId, SecretKey)
+            rsp = ai_obj.face_detectface(image_data)
 
         major_total = 0
         minor_total = 0

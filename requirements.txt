@@ -4,3 +4,9 @@ pandas==0.22.0
 numpy==1.14.1
 Pillow==5.1.0
 scikit-learn==0.19.1
+face_recognition_models
+Click>=6.0
+dlib>=19.3.0
+Pillow
+scipy>=0.17.0
+flask
