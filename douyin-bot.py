@@ -142,10 +142,21 @@ def main():
         img = face_recognition.load_image_file("cropped.png")
         # 为用户上传的图片中的人脸编码
         unknown_face_encodings = face_recognition.face_encodings(img)
+        faceLocations = face_recognition.face_locations(img)
+
+
 
         if len(unknown_face_encodings) > 0:
-            ai_obj = apiutil.AiPlat(SecretId, SecretKey)
-            rsp = ai_obj.face_detectface(image_data)
+            # Return the result as json
+            result = []
+            for face in faceLocations:
+                width = face[1] - face[3]
+                height = face[2] - face[0]
+                quality = ((width + height) / 2 - 150)
+                result.append(quality)
+            if result[0] > 30:
+                ai_obj = apiutil.AiPlat(SecretId, SecretKey)
+                rsp = ai_obj.face_detectface(image_data)
 
         major_total = 0
         minor_total = 0

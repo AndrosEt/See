@@ -57,7 +57,7 @@ class AiPlat(object):
 
         setParams(self.data, 'Action', "CreatePerson")
         setParams(self.data, 'Version', "2020-03-03")
-        setParams(self.data, 'GroupId', "test")
+        setParams(self.data, 'GroupId', "douyin-shenzheng")
         setParams(self.data, 'PersonName', str(userName))
         setParams(self.data, 'PersonId', str(userName))
         image_data = base64.b64encode(image)
@@ -77,7 +77,7 @@ class AiPlat(object):
             req.from_json_string(json.dumps(params))
 
             resp = client.CreatePerson(req)
-            print("created face: ", resp.FaceId)
+            print("-------------------------------------- created face: ", resp.FaceId)
 
             return resp.to_json_string()
 
